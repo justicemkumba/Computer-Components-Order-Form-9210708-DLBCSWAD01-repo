@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Components Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Computer Components Order Form</h1>
+        <p>Personal details</p>
+        <form id="orderForm">
+            <!-- Division for personal details -->
+            <div class="form-details">
+                <div class="name">
+                    <label for="validationDefaultFirstname">First name:</label>
+                    <input type="text" class="form-control" id="validationDefaultFirstname" aria-describedby="inputGroupPrepend2" required/>
+                </div>
+                <div class="name">
+                    <label for="validationDefaultLastname">Last name:</label>
+                    <input type="text" class="form-control" id="validationDefaultLastname" aria-describedby="inputGroupPrepend2" required/>
+                </div>
+            </div>
+
+            <!-- Division for contact details -->
+            <div class="form-details">
+                <div class="name">
+                    <label for="inputEmail4" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="inputEmail4" aria-describedby="inputGroupPrepend2" required/>
+                </div>
+                <div class="name">
+                    <label for="inputAddress" class="form-label">Address:</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"/>
+                </div>
+            </div>
+
+            <p>Order details</p>
+
+            <!-- Group for selecting CPU -->
+            <div class="form-group">
+                <label>CPU:</label><br />
+                <div class="component-group">
+                    <label class="component-name" for="cpu_i7">Intel Core i7 - $300</label>
+                    <input type="number" id="cpuQuantity_i7" name="cpuQuantity_i7" min="1" placeholder="Qty" /><br />
+                </div>
+                
+                <div class="component-group">
+                    <label class="component-name" for="cpu_i5">Intel Core i5 - $250</label>
+                    <input type="number" id="cpuQuantity_i5" name="cpuQuantity_i5" min="1" placeholder="Qty" /><br />
+                </div>
+    
+                <div class="component-group">
+                    <label class="component-name" for="cpu_ryzen9">AMD Ryzen 9 - $350</label>
+                    <input type="number" id="cpuQuantity_ryzen9" name="cpuQuantity_ryzen9" min="1" placeholder="Qty" />
+                </div>   
+            </div>
+
+            <!-- Group for selecting GPU -->
+            <div class="form-group">
+                <label>GPU:</label><br />
+                <div class="component-group">
+                    <label class="component-name" for="gpu_rtx3080">NVIDIA GeForce RTX 3080 - $800</label>
+                    <input type="number" id="gpuQuantity_rtx3080" name="gpuQuantity_rtx3080" min="1" placeholder="Qty" /><br />
+                </div>   
+                
+                <div class="component-group">
+                    <label class="component-name" for="gpu_gtx1080">NVIDIA GeForce GTX 1080 - $600</label>
+                    <input type="number" id="gpuQuantity_gtx1080" name="gpuQuantity_gtx1080" min="1" placeholder="Qty" /><br />
+                </div> 
+
+                <div class="component-group">
+                    <label class="component-name" for="gpu_rx6800xt">AMD Radeon RX 6800 XT - $700</label>
+                    <input type="number" id="gpuQuantity_rx6800xt" name="gpuQuantity_rx6800xt" min="1" placeholder="Qty" />
+                </div> 
+            </div>
+
+            <!-- Group for selecting RAM -->
+            <div class="form-group">
+                <label>RAM:</label><br />
+                <div class="component-group">
+                    <label class="component-name" for="ram_4gb">4GB DDR4 - $50</label>
+                    <input type="number" id="ramQuantity_4gb" name="ramQuantity_4gb" min="1" placeholder="Qty" /><br />
+                </div> 
+
+                <div class="component-group">
+                    <label class="component-name" for="ram_8gb">8GB DDR4 - $80</label>
+                    <input type="number" id="ramQuantity_8gb" name="ramQuantity_8gb" min="1" placeholder="Qty" /><br />
+                </div> 
+
+                <div class="component-group">
+                    <label class="component-name" for="ram_16gb">16GB DDR4 - $120</label>
+                    <input type="number" id="ramQuantity_16gb" name="ramQuantity_16gb" min="0" placeholder="Qty" />
+                </div> 
+            </div>
+
+            <!-- Checkbox to confirm the order -->
+            <div class="form-checkbox">
+                <input type="checkbox" class="form-check-input" id="validationFormCheck1" required/>
+                <label class="form-check-label" for="validationFormCheck1">Confirm order</label>
+            </div>
+
+            <div class="btn">
+                <button type="submit">Place Order</button>
+            </div>
+
+            <!-- Place this div at the end of the body to cover the entire page -->
+            <div id="customAlert" class="custom-alert">
+                <span id="alertText" class="alert-text"></span>
+            </div>
+        </form>
+        <div id="orderSummary"></div>
+
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
